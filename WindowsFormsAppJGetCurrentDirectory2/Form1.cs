@@ -34,14 +34,14 @@ namespace WindowsFormsAppJGetCurrentDirectory2
             this.Width = 1250;
             this.Height = 200;
 
-            string dir = Directory.GetCurrentDirectory();
+            string cd = Directory.GetCurrentDirectory();
             string temp = "\\bin\\Debug";
-            string dir2 = dir.Substring(0, dir.IndexOf(temp)); 
+            string dir = cd.Substring(0, cd.IndexOf(temp)); 
             // dir += "\\img";
             // string dir = "\\img";
             // img = Image.FromFile("C:\\Users\\Enin\\RiderProjects\\WindowsFormsAppEasyCs81\\WindowsFormsAppEasyCs81\\img\\sunsymbol3.png");
             // img = Image.FromFile(dir + "\\sunsymbol3.png");
-            img = Image.FromFile(dir2 + "\\img\\sunsymbol3.png");
+            img = Image.FromFile(dir + "\\img\\sunsymbol3.png");
             // img.Width = 32;
             // img.Height = 32;
             
