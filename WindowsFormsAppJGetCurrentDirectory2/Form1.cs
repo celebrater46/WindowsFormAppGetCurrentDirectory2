@@ -25,6 +25,7 @@ namespace WindowsFormsAppJGetCurrentDirectory2
         
         private Image img;
         private Label lb;
+        private string dir;
         
         public Form1()
         {
@@ -36,7 +37,15 @@ namespace WindowsFormsAppJGetCurrentDirectory2
 
             string cd = Directory.GetCurrentDirectory();
             string temp = "\\bin\\Debug";
-            string dir = cd.Substring(0, cd.IndexOf(temp)); 
+            // bool binDebug = cd.Contains("C");
+            // bool binDebug = cd.Contains("Debug");
+            bool binDebug = cd.Contains("\\bin\\Debug");
+            // bool binDebug = cd.Contains(temp);
+            // string dir;
+            if (binDebug == true)
+            {
+                dir = cd.Substring(0, cd.IndexOf(temp));
+            }
             // dir += "\\img";
             // string dir = "\\img";
             // img = Image.FromFile("C:\\Users\\Enin\\RiderProjects\\WindowsFormsAppEasyCs81\\WindowsFormsAppEasyCs81\\img\\sunsymbol3.png");
